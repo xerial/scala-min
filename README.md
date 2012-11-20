@@ -14,7 +14,7 @@ scala-min project includes:
 
 ### Usage
 
-Download tar.gz archive of this project, then extract the contents:
+Download [tar.gz archive](https://github.com/xerial/scala-min/archive/scala-min-0.1.tar.gz) or [.zip](https://github.com/xerial/scala-min/archive/scala-min-0.1.zip) of this project, then extract the contents:
 
 **Run tests**
 
