@@ -19,7 +19,7 @@ Alternatively, you can run the following commands to extract the scala-min proje
 
     $ mkdir myproject
     $ cd myproject
-    $ curl -L https://github.com/xerial/scala-min/archive/0.1.tar.gz | tar xvz --strip-components=1
+    $ curl -L https://github.com/xerial/scala-min/archive/0.1.1.tar.gz | tar xvz --strip-components=1
 
 
 **Run tests**
