@@ -1,7 +1,7 @@
 scala-min
 =========
 
-A minimam project template to start programming with Scala.
+A minimal project template to start programming with Scala.
 
 ### Contents
 
@@ -20,7 +20,7 @@ Download tar.gz archive of this project, then extract the contents:
 
     $ bin/sbt test
 
-**Run tests upon updates of source codes**
+**Run tests when updates of source codes are detected**
    
     $ bin/sbt "~test"
 
