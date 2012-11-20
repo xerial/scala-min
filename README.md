@@ -20,11 +20,11 @@ Download [tar.gz archive](https://github.com/xerial/scala-min/archive/scala-min-
 
     $ bin/sbt test
 
-**Run tests when updates of source codes are detected**
+**Run tests when updates of the source codes are detected**
    
     $ bin/sbt "~test"
 
-**Run specific tests maching a pattern**
+**Run specific tests matching a pattern**
 
     $ bin/sbt "~test-only *HelloTest"
 
