@@ -49,7 +49,9 @@ Download tar.gz archive of this project, then extract the contents:
 
     $ bin/sbt gen-idea
 
-**Add dendent libraries**
+Then open the project folder from IntelliJ.
+
+**Add dependent libraries**
 
 Edit `project/Build.scala`, then add libraries to `libraryDependences` variable.
 
