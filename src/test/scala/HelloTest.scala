@@ -51,7 +51,7 @@ class HelloTest extends MySpec {
     }
 
     "add a tag to test" taggedAs("test1") in {
-      // You can run this test only with "bin/sbt "~test-only *HelloTest -- include(test1)"
+      // You can run only this test with "bin/sbt "~test-only *HelloTest -- include(test1)"
       debug("test1 is running")
     }
 
