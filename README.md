@@ -8,7 +8,7 @@ A minimal project template to start programming with Scala.
 scala-min project includes:
 - Sample Scala codes.
 - [ScalaTest](http://www.scalatest.org/) examples
-- Settings for developping with IntelliJ IDE
+- Pre-configured settings for developing with IntelliJ IDE
 - A command for packaging projects with [sbt-pack](http://github.com/xerial/sbt-pack) plugin.
   - `sbt-pack` also generates installation scripts for you programs.
 
@@ -39,6 +39,7 @@ Download tar.gz archive of this project, then extract the contents:
     Hello World!!
 
 **Install your program**
+
     $ bin/sbt pack
     $ cd target/pack; make install
     $ ~/local/bin/hello
@@ -47,6 +48,10 @@ Download tar.gz archive of this project, then extract the contents:
 **Create IntelliJ project files**
 
     $ bin/sbt gen-idea
+
+**Add dendent libraries**
+
+Edit `project/Build.scala`, then add libraries to `libraryDependences` variable.
 
 ### Customize
 
