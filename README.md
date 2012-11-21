@@ -36,7 +36,7 @@ Alternatively, you can run the following commands to extract the scala-min proje
 
 **Run tagged test only**
 
-    $ bin/sbt "~test -- include(test1)"
+    $ bin/sbt "~test-only *HelloTest -- -n test1"
 
 **Create a runnable package**
   
