@@ -14,7 +14,7 @@ object Build extends sbt.Build {
         packMain := Map("hello" -> "scalamin.Hello"),
         // custom settings here
         scalaVersion := "2.10.0",
-        //crossPaths := false,
+        crossPaths := false,
         libraryDependencies ++= Seq(
           // Add dependent jars here
           "org.xerial" % "xerial-core" % "3.1",
