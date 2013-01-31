@@ -5,6 +5,7 @@ import org.scalatest.{Tag, OptionValues, GivenWhenThen, WordSpec}
 import xerial.core.io.Resource
 import xerial.core.log.Logger
 import xerial.core.util.Timer
+import scala.language.implicitConversions
 
 //--------------------------------------
 //

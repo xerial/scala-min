@@ -35,13 +35,14 @@ class HelloTest extends MySpec {
     }
 
     "display formatted logs" in {
-      info("Hello %s!!", "World")
-      info("Floating point value: pi = %.10f, rad=%.3e", math.Pi, math.toRadians(math.Pi))
+      val w = "World"
+      info(s"Hello $w!!")
+      info(f"Floating point value: pi = ${math.Pi}%.10f, rad = ${math.toRadians(math.Pi)}%.3e")
     }
 
     "test something" in {
       val a = Array(1, 2, 3, 4)
-      debug("contents of a:[%s]", a.mkString(", "))
+      debug(s"contents of a:[${a.mkString(", ")}]")
 
       a.size should be (4)
       a(0) should be (1)
@@ -55,7 +56,7 @@ class HelloTest extends MySpec {
       debug("test1 is running")
     }
 
-    "measure the code block performance" in {
+    "measure the code block performance" taggedAs("loop") in {
 
       val N = 100000
       val R = 100
@@ -67,6 +68,12 @@ class HelloTest extends MySpec {
           }
         }
 
+        block("for-f", repeat=R) {
+          (0 until N).foreach { i =>
+            // do nothing
+          }
+        }
+
         block("while", repeat=R) {
           var i = 0
           while(i < N) {
@@ -74,12 +81,21 @@ class HelloTest extends MySpec {
             i += 1
           }
         }
+
+        block("while-f", repeat=R) {
+          var i = 0
+          def void(i:Int) = {  }
+          while(i < N) {
+            void(i)
+            i += 1
+          }
+        }
       }
     }
 
-    "measure the parallel collection pefromance" in {
+    "measure the parallel collection performance" in {
 
-      val a = Array.ofDim[Int](100000)
+      val a = Array.ofDim[Int](200000)
       val R = 10
 
       def multiply(e:Int) = e * e
