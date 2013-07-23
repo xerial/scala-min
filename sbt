@@ -415,14 +415,13 @@ esac
     sbt_tmpdir=`cygpath -wa "$sbt_tmpdir"`
     extra_jvm_opts=-Djava.io.tmpdir="$sbt_tmpdir"
   fi
+  if [ ! -e "$sbt_tmpdir" ];
+  then
+    mkdir -p $sbt_tmpdir;
+  fi
   addJava "-Dsbt.global.base=$sbt_dir"
   echo "Using $sbt_dir as sbt dir, -sbt-dir to override."
 }
-
-if [ ! -f "$sbt_dir" ];
-then
-    mkdir -p $sbt_dir
-fi
 
 # since sbt 0.7 doesn't understand iflast
 (( ${#residual_args[@]} == 0 )) && residual_args=( "shell" )
