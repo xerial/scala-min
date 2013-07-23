@@ -10,7 +10,7 @@ scala-min project includes:
 - [ScalaTest](http://www.scalatest.org/) examples (writing specs, logging, tagging tests, measuring code performances, etc.)
 - Pre-configured settings for developing with IntelliJ IDEA
 - A command for packaging projects with [sbt-pack](http://github.com/xerial/sbt-pack) plugin.
-  - `sbt-pack` also generates installation scripts for you programs.
+  - `sbt-pack` also generates installation scripts of you programs.
 
 ### Usage
 
@@ -55,7 +55,7 @@ Alternatively, you can run the following commands to extract the scala-min proje
 
     $ ./sbt gen-idea
 
-Then open the project folder from IntelliJ.
+Then, open this project folder in IntelliJ.
 
 **Add dependent libraries**
 
@@ -65,7 +65,7 @@ Edit `project/Build.scala`, then add libraries to `libraryDependences` variable.
 
 Rename the project name defined in `project/Build.scala` as you like.
 
-### ToDo
+### Examples using scala-min
 
-- Add examples using command line parser
+- [Command line parser](https://github.com/xerial/sbt-pack/tree/develop/src/sbt-test/sbt-pack/command-launcher)
 
