@@ -24,36 +24,36 @@ Alternatively, you can run the following commands to extract the scala-min proje
 
 **Run tests**
 
-    $ bin/sbt test
+    $ ./sbt test
 
 **Run tests when updates of the source codes are detected**
    
-    $ bin/sbt "~test"
+    $ ./sbt "~test"
 
 **Run specific tests matching a pattern**
 
-    $ bin/sbt "~test-only *HelloTest"
+    $ ./sbt "~test-only *HelloTest"
 
 **Run tagged test only**
 
-    $ bin/sbt "~test-only *HelloTest -- -n test1"
+    $ ./sbt "~test-only *HelloTest -- -n test1"
 
 **Create a runnable package**
   
-    $ bin/sbt pack
+    $ ./sbt pack
     $ target/pack/bin/hello
     Hello World!!
 
 **Install your program**
 
-    $ bin/sbt pack
+    $ ./sbt pack
     $ cd target/pack; make install
     $ ~/local/bin/hello
     Hello World!!
 
 **Create IntelliJ project files**
 
-    $ bin/sbt gen-idea
+    $ ./sbt gen-idea
 
 Then open the project folder from IntelliJ.
 

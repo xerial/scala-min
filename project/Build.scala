@@ -13,11 +13,11 @@ object Build extends sbt.Build {
         // Mapping from program name -> Main class
         packMain := Map("hello" -> "scalamin.Hello"),
         // custom settings here
-        scalaVersion := "2.10.0",
+        scalaVersion := "2.10.2",
         crossPaths := false,
         libraryDependencies ++= Seq(
           // Add dependent jars here
-          "org.xerial" % "xerial-core" % "3.1",
+          "org.xerial" % "xerial-core" % "3.2.0",
           "org.scalatest" %% "scalatest" % "2.0.M5b" % "test"
         )
       )
