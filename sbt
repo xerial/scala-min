@@ -35,9 +35,9 @@ die() {
 }
 
 # todo - make this dynamic
-declare -r sbt_release_version=0.12.2
+declare -r sbt_release_version=0.12.4
 unset sbt_rc_version
-declare -r sbt_rc_version=0.12.2
+declare -r sbt_rc_version=0.12.4
 declare -r sbt_snapshot_version=0.13.0-SNAPSHOT
 declare -r sbt_snapshot_baseurl="http://typesafe.artifactoryonline.com/typesafe/ivy-snapshots/org.scala-sbt/sbt-launch/"
 
@@ -49,7 +49,7 @@ declare -r sbt_opts_file=".sbtopts"
 declare -r jvm_opts_file=".jvmopts"
 declare -r latest_28="2.8.2"
 declare -r latest_29="2.9.2"
-declare -r latest_210="2.10.0"
+declare -r latest_210="2.10.2"
 
 declare -r script_path=$(get_script_path "$BASH_SOURCE")
 
@@ -418,6 +418,11 @@ esac
   addJava "-Dsbt.global.base=$sbt_dir"
   echo "Using $sbt_dir as sbt dir, -sbt-dir to override."
 }
+
+if [ ! -f "$sbt_dir" ];
+then
+    mkdir -p $sbt_dir
+fi
 
 # since sbt 0.7 doesn't understand iflast
 (( ${#residual_args[@]} == 0 )) && residual_args=( "shell" )
