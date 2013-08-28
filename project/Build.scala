@@ -17,8 +17,8 @@ object Build extends sbt.Build {
         crossPaths := false,
         libraryDependencies ++= Seq(
           // Add dependent jars here
-          "org.xerial" % "xerial-core" % "3.2.0",
-          "org.scalatest" %% "scalatest" % "2.0.M5b" % "test"
+          "org.xerial" % "xerial-core" % "3.2.1",
+          "org.scalatest" % "scalatest_2.10" % "2.0.M5b" % "test"
         )
       )
   )
