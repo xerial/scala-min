@@ -54,8 +54,8 @@ Alternatively, you can run the following commands to extract the scala-min proje
 
 **Create tar.gz archive of your program**
     
-   $ ./sbt pack-archive
-   (myproject-0.1.tar.gz will be created)
+    $ ./sbt pack-archive
+    (myproject-0.1.tar.gz will be created)
 
 **Create IntelliJ project files**
 
